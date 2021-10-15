@@ -9,11 +9,6 @@ const Header = () => {
                                         Home
                                 </button>
                         </Link>
-                        <Link to={ROUTES.USERS_PAGE}>
-                        <button>
-                                Users Page
-                        </button>
-                        </Link>
                 </div>
         );
 };

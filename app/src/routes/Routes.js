@@ -1,13 +1,14 @@
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {ROUTES} from './routeNames';
 import Home from '../Pages/homePage';
-import UsersPageContainer from '../Pages/UsersPage/conteiners/UsersPageContainer';
+import Counter from '../Pages/counterPage/components/counter';
+import CounterPageContainer from '../Pages/counterPage/components/containers/CounterPageContainer';
 
 const Routes = () => {
         return (
                 <Switch>
                         <Route exact path={ROUTES.HOME} component={Home}/>
-                        <Route path={ROUTES.USERS_PAGE} component={UsersPageContainer}/>
+                        <Route path={ROUTES.COUNTER} component={CounterPageContainer}/>
                         <Redirect path='*' to={ROUTES.HOME}/>
                 </Switch>
         );
