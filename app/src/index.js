@@ -5,15 +5,15 @@ import reportWebVitals from './reportWebVitals';
 import Routes from './routes/Routes';
 import {BrowserRouter} from 'react-router-dom'
 import MainLayout from './components/MainLayout/MainLayout'
+import Header from './components/Header';
 
 ReactDOM.render(
 
     <BrowserRouter>
       <MainLayout>
-          <Routes/>
+        <Routes/>
       </MainLayout>
     </BrowserRouter>,
-
   document.getElementById('root')
 );
 reportWebVitals();

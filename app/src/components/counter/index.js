@@ -1,21 +1,17 @@
-import { Link } from 'react-router-dom'
-import { ROUTES } from '../../../../routes/routeNames'
+
 import styles from './styles.module.scss'
 import PropTypes from 'prop-types'
 
-const Counter = ({ countValue, handleIncrement, handleDecrement, handleReset, isParity }) => {
+
+const Counter = ({ countValue, handleIncrement, handleDecrement, handleReset}) => {
+        const isEven = countValue % 2 === 0;
         return (
                 <div>
-                        <Link to={ROUTES.HOME}>
-                                <button>
-                                        home
-                                </button>
-                        </Link>
                         <div className={styles.counterContainer}
-                                style={{ backgroundColor: isParity ? 'beige' : 'white'}}>
+                                style={{ backgroundColor: isEven ? 'beige' : 'white'}}>
                                 <div className={styles.display}>
                                         <div className={styles.displayElement}>{countValue}</div>
-                                        <div className={styles.displayElement}>{isParity ? 'четное' : 'нечетное'}</div>
+                                        <div className={styles.displayElement}>{isEven ? 'Even' : 'Odd'}</div>
                         </div>
                                 <div className={styles.controlPanel}>
                                         <button className={styles.buttons} onClick={handleIncrement}>+</button>
