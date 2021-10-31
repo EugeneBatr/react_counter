@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import PropTypes from 'prop-types'
 
 
-const Counter = ({ countValue, handleIncrement, handleDecrement, handleReset}) => {
+const Counter = ({ countValue, handleIncrement, handleDecrement, handleResetCounter, handleRemove}) => {
         const isEven = countValue % 2 === 0;
         return (
                 <div>
@@ -16,7 +16,8 @@ const Counter = ({ countValue, handleIncrement, handleDecrement, handleReset}) =
                                 <div className={styles.controlPanel}>
                                         <button className={styles.buttons} onClick={handleIncrement}>+</button>
                                         <button className={styles.buttons} onClick={handleDecrement}>-</button>
-                                        <button className={styles.buttons} onClick={handleReset}>Reset</button>
+                                        <button className={styles.buttons} onClick={handleResetCounter}>Reset</button>
+                                        <button className={styles.buttons} onClick={handleRemove}>Remove</button>
                                 </div>
                         </div>
                 </div>

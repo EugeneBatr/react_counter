@@ -17,6 +17,8 @@ const FunctionalCounterContainer = () => {
         const handleReset = () => {
                 setCountValue(0)
         }
+        
+        
 
         return <FunctionalContainerLayout 
         countValue={countValue}

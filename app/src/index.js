@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Routes from './routes/Routes';
 import {BrowserRouter} from 'react-router-dom'
+import { Provider } from 'react-redux';
+
+import './index.css';
+import Routes from './routes/Routes';
 import MainLayout from './components/MainLayout/MainLayout'
-import Header from './components/Header';
+import reportWebVitals from './reportWebVitals';
+import { configureStore } from './store/configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
 
     <BrowserRouter>
-      <MainLayout>
-        <Routes/>
-      </MainLayout>
+      <Provider store={store}>
+        <MainLayout>
+          <Routes/>
+        </MainLayout>
+      </Provider>
     </BrowserRouter>,
   document.getElementById('root')
 );
