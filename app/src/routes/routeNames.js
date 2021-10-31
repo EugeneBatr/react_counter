@@ -1,4 +1,7 @@
 export const ROUTES = {
         HOME: '/',
-        USERS_PAGE: '/users'
+        COUNTER: '/counter',
+        FUNC_COUNTER: '/func-counter',
+        COUNTER_OF_COUNTERS: '/counters',
+        TO_DO_LIST: '/to-do-list',
 }

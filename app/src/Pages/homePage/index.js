@@ -1,4 +1,8 @@
-import Header from "../../components/Header";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../routes/routeNames";
+import Routes from "../../routes/Routes";
+import Counter from "../../components/counter";
+
 
 
 const Home = () => {

@@ -1,20 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import UsersPageContainer from './Pages/UsersPage/conteiners/UsersPageContainer';
-import Routes from './routes/Routes';
 import {BrowserRouter} from 'react-router-dom'
-import MainLayout from './components/Layout/MainLayout'
+import { Provider } from 'react-redux';
+
+import './index.css';
+import Routes from './routes/Routes';
+import MainLayout from './components/MainLayout/MainLayout'
+import reportWebVitals from './reportWebVitals';
+import { configureStore } from './store/configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
 
     <BrowserRouter>
-      <MainLayout>
+      <Provider store={store}>
+        <MainLayout>
           <Routes/>
-      </MainLayout>
+        </MainLayout>
+      </Provider>
     </BrowserRouter>,
-
   document.getElementById('root')
 );
 reportWebVitals();
